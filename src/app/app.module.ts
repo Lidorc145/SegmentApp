@@ -10,7 +10,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { Ng2SmartTableModule } from "ng2-smart-table";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { DropdownDirective } from "./dropdown.directive";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "popper.js";
@@ -29,12 +28,7 @@ import "jquery/dist/jquery.min.js";
       { path: `:filter`, component: OrderTableComponent }
     ])
   ],
-  declarations: [
-    AppComponent,
-    OrderTableComponent,
-    DropdownDirective,
-    HeaderComponent
-  ],
+  declarations: [AppComponent, OrderTableComponent, HeaderComponent],
   providers: [HttpService],
   bootstrap: [AppComponent]
 })
