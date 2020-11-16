@@ -10,6 +10,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { Ng2SmartTableModule } from "ng2-smart-table";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { DropdownDirective } from "./dropdown.directive";
 
 @NgModule({
   imports: [
@@ -24,7 +25,12 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
       { path: `:filter`, component: OrderTableComponent }
     ])
   ],
-  declarations: [AppComponent, OrderTableComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    OrderTableComponent,
+    DropdownDirective,
+    HeaderComponent
+  ],
   providers: [HttpService],
   bootstrap: [AppComponent]
 })
