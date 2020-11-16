@@ -14,6 +14,7 @@ import {LocalDataSource} from 'ng2-smart-table';
   providers: [NgbTooltipConfig]
 })
 export class OrderTableComponent implements OnInit {
+  dataReceived=false;
   selectedData;
   columns = {};
   settings = {};
@@ -34,6 +35,7 @@ export class OrderTableComponent implements OnInit {
 
   ngOnInit() {
     this._http.getTableData().subscribe(data => {
+      this.dataReceived=true;
       if (data['Items']) {
         for (let item in data['Items'][0]) {
           this.columns[item] = {title: item};
